@@ -109,10 +109,10 @@ for(a=0;a<n;a++)
 {
   printf("%d ",tab1[a]);
 }
-
-while(!(IsSorted (tab1, n)==1))
-{
-for(int a=0;a<n-1;a++)
+                            //update. ver2 - nie zauwazylem ze wyslalem wczesniej plik gdzie mialem wklejona wersje poczatkowa kodu
+for(i=0;i<n-1;i++)          // Wersja ta dzialala i wykonywala swoje zadanie ale byla  ułomna i nieefektywna
+{                           // w stosunku do poprzedniej wesji sa 2 zmiany: 1.usunieta zbyteczna petle while
+for(a=0;a<n-i-1;a++)        //2. dopisana linijka kodu zeby za kazdym razem nie sprawdzac juz uporzadkowanego konca tablicy
 {
   if (tab1[a]>tab1[a+1])
    {
@@ -122,6 +122,7 @@ for(int a=0;a<n-1;a++)
    }
   }
 }
+  
 printf("\n\nTablica 1 po zastosowaniu algorytmu sortowania babelkowego:\n");
 for(a=0;a<n;a++)
 {
